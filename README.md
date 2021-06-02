@@ -15,4 +15,13 @@ You can install package from Github through
 ``` r
 devtools::install_github("YuxinHuang0723/samplepackage")```
 ```
+To view the vignettes
 
+```{r}
+devtools::install_github("YuxinHuang0723/samplepackage", build_vignette = TRUE, build_opts = c())
+library(Demo)
+# Use this to view the vignette in the Demo HTML help
+help(package = "samplepackage", help_type = "html")
+# Use this to view the vignette as an isolated HTML file
+utils::browseVignettes(package = "samplepackage")
+```
