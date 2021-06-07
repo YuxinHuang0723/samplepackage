@@ -4,15 +4,14 @@
 #'
 #' @param x a numeric vector of data.
 #' @param alternative a character string specifying the alternative hypothesis.
-#'   This should only accept @keywords "two.sided", @keywords "less",
-#'   or @keywords" greater".
+#'   This should only accept "two.sided", "less", or greater".
 #' @param mu a number indicating the null hypothesis value of the mean.
 #'
 #' @return A list with the numeric test statistic, the degrees of freedom,
 #'   the value of the parameter \code{alternative}, the numeric p-value.
 #'
 #' @example
-#' my_t.test(my_gapminder$lifeExp, less, 60)
+#' my_t.test(lifeExp, less, 60)
 #'
 #' @export
 my_t.test <- function(x, alternative, mu) {

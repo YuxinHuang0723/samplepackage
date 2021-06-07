@@ -10,8 +10,7 @@ my_t.test(x, alternative, mu)
 \item{x}{a numeric vector of data.}
 
 \item{alternative}{a character string specifying the alternative hypothesis.
-This should only accept @keywords "two.sided", @keywords "less",
-or @keywords" greater".}
+This should only accept "two.sided", "less", or greater".}
 
 \item{mu}{a number indicating the null hypothesis value of the mean.}
 }
