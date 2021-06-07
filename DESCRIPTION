@@ -1,5 +1,5 @@
 Package: samplepackage
-Title: My first package for stat302 project3
+Title: My First Package for Stat302 Project3
 Version: 0.1.0
 Authors@R: 
     person(given = "Yuxin",
