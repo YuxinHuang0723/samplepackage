@@ -11,7 +11,7 @@
 #'   the value of the parameter \code{alternative}, the numeric p-value.
 #'
 #' @example
-#' my_t.test(lifeExp, less, 60)
+#' my_t.test(rnorm(10, mean = 3), "two.sided", 0)
 #'
 #' @export
 my_t.test <- function(x, alternative, mu) {

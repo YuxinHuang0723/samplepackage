@@ -1,8 +1,17 @@
-#' Power function
+#' Linear model function
 #'
-#' This function raises input to a power.
-
-
+#' This function can fit a linear model in R.
+#'
+#' @param formula  a \code{formula} class object, similar to lm().
+#' @param data input data frame.
+#'
+#' @return A table with rows for each coefficient (including the (Intercept)!)
+#'   and columns for the Estimate, Std. Error, t value, and Pr(>|t|).
+#'
+#' @example
+#' my_lm(mpg ~ hp, mtcars)
+#'
+#' @export
 my_lm <- function(formula, data) {
 
   #using model.frame()to construct the data into frame

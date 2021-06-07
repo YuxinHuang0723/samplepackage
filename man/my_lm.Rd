@@ -2,10 +2,19 @@
 % Please edit documentation in R/my_lm.R
 \name{my_lm}
 \alias{my_lm}
-\title{Power function}
+\title{Linear model function}
 \usage{
 my_lm(formula, data)
 }
+\arguments{
+\item{formula}{a \code{formula} class object, similar to lm().}
+
+\item{data}{input data frame.}
+}
+\value{
+A table with rows for each coefficient (including the (Intercept)!)
+and columns for the Estimate, Std. Error, t value, and Pr(>|t|).
+}
 \description{
-This function raises input to a power.
+This function can fit a linear model in R.
 }
