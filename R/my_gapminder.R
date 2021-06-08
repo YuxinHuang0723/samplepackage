@@ -1,5 +1,5 @@
 #' Gapminder data.
-#' gapminder <- my_gapminder
+#'
 #'
 #' Excerpt of the Gapminder data on life expectancy, GDP per capita, and
 #' population by country.
@@ -30,6 +30,7 @@
 #' aggregate(lifeExp ~ continent, gapminder, median)
 #' plot(lifeExp ~ year, gapminder, subset = country == "Cambodia", type = "b")
 #' plot(lifeExp ~ gdpPercap, gapminder, subset = year == 2007, log = "x")
+#' gapminder <- my_gapminder
 #'
 #' if (require("dplyr")) {
 #' gapminder %>%
