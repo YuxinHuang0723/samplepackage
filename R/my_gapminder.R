@@ -1,4 +1,5 @@
 #' Gapminder data.
+#' gapminder <- my_gapminder
 #'
 #' Excerpt of the Gapminder data on life expectancy, GDP per capita, and
 #' population by country.
