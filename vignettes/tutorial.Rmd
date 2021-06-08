@@ -18,3 +18,51 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(samplepackage)
 ```
+
+#Introduction
+
+This package includes 4 part of functions, which are:
+\begin{itemize}
+\item my_t.test, A function can perform a one sample t test in R.
+\item my_lm, A function can fit a linear model in R.
+\item my_knn_cv,
+\item my_rf_cv.
+\end{itemize}
+
+To introduce each function of our package, we should first install the sample package:
+Install \texttt{samplepackage} using:
+```{r, eval = FALSE}
+devtools::install_github("YuxinHuang0723/samplepackage")
+```
+
+And We load other packages and data we need:
+```{r, eval = FALSE}
+library(samplepackage)
+data("my_gapminder")
+data("my_penguins")
+```
+
+#Part 2: The my_t.test function
+
+Use the lifeExp data from my_gapminder to test three different hypothesises about the mean. 
+
+In first situation, we set the null hypothesis as: mean of the lifeExp from gapminder data set is equal to 60, and the alternative hypothesis is that the mean of the data set is not equal to 60. We run the my_t.test function and get a list of statistics about this test hypothesis:
+```{r}
+my_t.test(my_gapminder$lifeExp, "two.sided", 60)
+```
+We have our P value for this test is 0.09314, which is greater than our cut off p value 0.05. This comparison indicates that we fail to reject the null hypothesis and the mean of the lifeExp from the gapminder dataset is equal to 60. 
+
+
+
+In second situation, we set the null hypothesis as: mean of the lifeExp from gapminder data set is equal to 60, and the alternative hypothesis is that the mean of the data set is greater than 60. We run the my_t.test function and get a list of statistics about this test hypothesis:
+```{r}
+my_t.test(my_gapminder$lifeExp, "greater", 60)
+```
+We have our P value for this test is 0.95343, which is greater than our cut off p value 0.05. This comparison indicates that we fail to reject the null hypothesis and the mean of the lifeExp from the gapminder data set is equal to 60.
+
+In third situation, we set the null hypothesis as: mean of the lifeExp from gapminder data set is equal to 60, and the alternative hypothesis is that the mean of the data set is less than 60. We run the my_t.test function and get a list of statistics about this test hypothesis:
+```{r}
+my_t.test(my_gapminder$lifeExp, "less", 60)
+```
+We have our P value for this test is 0.04657, which is less than our cut off p value 0.05. This comparison indicates that we reject the null hypothesis and have the evidence to support our alternative hypothesis: the mean of lifeExp from the gapminder data set is less than 60.
+
