@@ -11,6 +11,9 @@
 #' @example
 #' my_lm(mpg ~ hp, mtcars)
 #'
+#' @importFrom stats model.frame model.matrix model.response
+#'   predict pt sd na.omit
+#'
 #' @export
 my_lm <- function(formula, data) {
 
