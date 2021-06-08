@@ -37,6 +37,7 @@ table(gapminder$continent)
 aggregate(lifeExp ~ continent, gapminder, median)
 plot(lifeExp ~ year, gapminder, subset = country == "Cambodia", type = "b")
 plot(lifeExp ~ gdpPercap, gapminder, subset = year == 2007, log = "x")
+gapminder <- my_gapminder
 
 if (require("dplyr")) {
 gapminder \%>\%
