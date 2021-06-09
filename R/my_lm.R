@@ -46,7 +46,7 @@ my_lm <- function(formula, data) {
   #forming a matrix to store the final statistics which we want to show
   #transform the matrix into data frame
   #and return the final data frame
-  matrix1 <- matrix(nrow= 2, ncol = 4)
+  matrix1 <- matrix(nrow= ncol(x), ncol = 4)
   matrix1 <- cbind(beta_hat, std_error, t_value, p_value)
   colnames(matrix1) <- c("Estimate", "Std. Error", "t value", "Pr(>|t|)")
   matrix1 <- as.data.frame(matrix1)
