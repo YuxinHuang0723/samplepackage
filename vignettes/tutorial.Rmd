@@ -42,7 +42,7 @@ data("my_gapminder")
 data("my_penguins")
 ```
 
-#Part 2: The my_t.test function
+#Part 2: my_t.test function
 
 Use the lifeExp data from my_gapminder to test three different hypothesis about the mean. 
 
@@ -66,3 +66,4 @@ my_t.test(my_gapminder$lifeExp, "less", 60)
 ```
 We have our P value for this test is 0.04657, which is less than our cut off p value 0.05. This comparison indicates that we reject the null hypothesis and have the evidence to support our alternative hypothesis: the mean of lifeExp from the gapminder data set is less than 60.
 
+#Part 3: my_lm function
