@@ -44,7 +44,7 @@ data("my_penguins")
 
 #Part 2: The my_t.test function
 
-Use the lifeExp data from my_gapminder to test three different hypothesises about the mean. 
+Use the lifeExp data from my_gapminder to test three different hypothesis about the mean. 
 
 In first situation, we set the null hypothesis as: mean of the lifeExp from gapminder data set is equal to 60, and the alternative hypothesis is that the mean of the data set is not equal to 60. We run the my_t.test function and get a list of statistics about this test hypothesis:
 ```{r}

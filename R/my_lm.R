@@ -30,7 +30,7 @@ my_lm <- function(formula, data) {
   #calculate the df
   #calculate the theta square in order to calculate standard error
   beta_hat <- round((solve(t(x) %*% x)) %*% t(x) %*% y, 5)
-  df <- length(y)-  (x + 1)
+  df <- length(y)-  ncol(x)
   theta <- sum(((y - x %*% beta_hat) ^ 2) / df)
 
   #first use error to store the diagnal value of the matrix
@@ -41,7 +41,7 @@ my_lm <- function(formula, data) {
   #using t_value to store test statistics
   #p_value to store the p value of the hypothesis testing
   t_value <- beta_hat / std_error
-  p_value <- 2 * pt(t_value, df, lower.tail = TRUE)
+  p_value <- 2 * pt(abs(t_value), df, lower.tail = FALSE)
 
   #forming a matrix to store the final statistics which we want to show
   #transform the matrix into data frame
