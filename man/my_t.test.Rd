@@ -21,3 +21,8 @@ the value of the parameter \code{alternative}, the numeric p-value.
 \description{
 This function can perform a one sample t test in R.
 }
+\examples{
+lifeExp <- my_gapminder$lifeExp
+my_t.test(lifeExp, "two.sided", 60)
+
+}

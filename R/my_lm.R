@@ -8,8 +8,11 @@
 #' @return A table with rows for each coefficient (including the (Intercept)!)
 #'   and columns for the Estimate, Std. Error, t value, and Pr(>|t|).
 #'
-#' @example
-#' my_lm(mpg ~ hp, mtcars)
+#' @examples
+#' lifeExp <- my_gapminder$lifeExp
+#' gdpPercap <- my_gapminder$gdpPercap
+#' continent <- my_gapminder$continent
+#' my_lm(lifeExp ~ gdpPercap + continent, my_gapminder)
 #'
 #' @importFrom stats model.frame model.matrix model.response
 #'   predict pt sd na.omit

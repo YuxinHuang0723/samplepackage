@@ -18,3 +18,10 @@ and columns for the Estimate, Std. Error, t value, and Pr(>|t|).
 \description{
 This function can fit a linear model in R.
 }
+\examples{
+lifeExp <- my_gapminder$lifeExp
+gdpPercap <- my_gapminder$gdpPercap
+continent <- my_gapminder$continent
+my_lm(lifeExp ~ gdpPercap + continent, my_gapminder)
+
+}

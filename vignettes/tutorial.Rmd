@@ -82,8 +82,6 @@ Then we test a hypothesis test for the gadPercap coefficient. The null hypothesi
 Finally, let plot the  Actual vs. Fitted values:
 ```{r}
 #load the package which we need in order to run ggplot
-library(tidyverse)
-
 #use matrix1 to store my_lm data statistics
 matrix1 <- my_lm(lifeExp ~ gdpPercap + continent, my_gapminder)
 
@@ -100,12 +98,12 @@ mod_fits <- fitted(real_lm)
 my_df <- data.frame(actual = actual , fitted = mod_fits)
 #plot the actual vs fitted graph 
 #using scatter plot to plot the graph 
-graph1 <- ggplot(my_df, aes(x = fitted, y = actual)) +
-  geom_point() +
-  geom_abline(slope = 1, intercept = 0, col = "red", lty = 2) + 
-  theme_bw(base_size = 15) +
-  labs(x = "Fitted values", y = "Actual values", title = "Actual vs. Fitted")+
-  theme(plot.title = element_text(hjust = 0.5))
+graph1 <- ggplot2::ggplot(my_df, ggplot2::aes(x = fitted, y = actual)) +
+  ggplot2::geom_point() +
+  ggplot2::geom_abline(slope = 1, intercept = 0, col = "red", lty = 2) + 
+  ggplot2::theme_bw(base_size = 15) +
+  ggplot2::labs(x = "Fitted values", y = "Actual values", title = "Actual vs. Fitted")+
+  ggplot2::theme(plot.title = ggplot2::element_text(hjust = 0.5))
 graph1
 ```
 From the graph, we can see that the function fit the real data value very well. Since all the points are plotted on the red line. 

@@ -10,7 +10,8 @@
 #' @return A list with the numeric test statistic, the degrees of freedom,
 #'   the value of the parameter \code{alternative}, the numeric p-value.
 #'
-#' @example
+#' @examples
+#' lifeExp <- my_gapminder$lifeExp
 #' my_t.test(lifeExp, "two.sided", 60)
 #'
 #' @export
