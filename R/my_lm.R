@@ -32,7 +32,7 @@ my_lm <- function(formula, data) {
   beta_hat <- round((solve(t(x) %*% x)) %*% t(x) %*% y, 5)
   df <- length(y)-  ncol(x)
   data1 <- ((y - x %*% beta_hat) ^ 2)
-  data1 <- data1 / df
+  data2 <- data1 / df
   theta <- sum(data2)
 
   #first use error to store the diagnal value of the matrix
