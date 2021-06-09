@@ -31,7 +31,9 @@ my_lm <- function(formula, data) {
   #calculate the theta square in order to calculate standard error
   beta_hat <- round((solve(t(x) %*% x)) %*% t(x) %*% y, 5)
   df <- length(y)-  ncol(x)
-  theta <- sum(((y - x %*% beta_hat) ^ 2) / df)
+  data1 <- ((y - x %*% beta_hat) ^ 2)
+  data1 <- data1 / df
+  theta <- sum(data2)
 
   #first use error to store the diagnal value of the matrix
   #then use std_error to store the standard error of value after square
