@@ -13,13 +13,15 @@ The goal of samplepackage is to ...
 You can install package from Github through 
 
 ``` r
-devtools::install_github("YuxinHuang0723/samplepackage")```
+devtools::install_github("YuxinHuang0723/samplepackage")
 ```
+
 To Use the package
 
 The vignette demonstrates example usage of all main functions.You can see the vignette by using the following code:
 
 ```r
+devtools::install_github("bryandmartin/Demo", build_vignette = TRUE, build_opts = c())
 library(samplepackage)
 #Use this to view the vignette in the Demo HTML help
 help(package = "samplepackage", help_type = "html")
