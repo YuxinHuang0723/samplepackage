@@ -4,6 +4,7 @@
 #'
 #' @param formula  a \code{formula} class object, similar to lm().
 #' @param data input data frame.
+#' @keywords inference
 #'
 #' @return A table with rows for each coefficient (including the (Intercept)!)
 #'   and columns for the Estimate, Std. Error, t value, and Pr(>|t|).
